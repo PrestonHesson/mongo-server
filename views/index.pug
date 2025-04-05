@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  button(type="button") Sample Button 
+  div(id="faster") Add in extra 
+
+    script. 
+    let value = 1;
+    let amt = 2;
+    function faster() {
+      amt = amt * 2;
+      value = value + amt;
+      document.getElementById("faster").innerText = 'Faster ${value} times ${amt}';
+    }
+
+  button(type="button", onclick="faster()") Sample Button
+
+  button(type="button", class="btn btn-secondary", onclick="faster()") Sample Button  
